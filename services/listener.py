@@ -93,4 +93,3 @@ def escutar() -> str:
         return texto_digitado
 
     return ""
-

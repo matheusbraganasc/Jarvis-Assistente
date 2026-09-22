@@ -11,9 +11,7 @@ class JarvisEngine:
     def __init__(self):
         self.api_key = os.getenv("GEMINI_API_KEY")
         if not self.api_key:
-            raise ValueError(
-                "[ERRO] Chave GEMINI_API_KEY nao encontrada no .env!"
-            )
+            raise ValueError("[ERRO] Chave GEMINI_API_KEY nao encontrada no .env!")
 
         self.client = genai.Client(api_key=self.api_key)
         self.system_instruction = (
@@ -41,7 +39,4 @@ class JarvisEngine:
             return resposta.text
         except Exception as e:
             print(f"[ERRO na IA]: {e}")
-            return (
-                "Perdao, Senhor. Ocorreu uma falha ao processar sua solicitacao no momento."
-            )
-
+            return "Perdao, Senhor. Ocorreu uma falha ao processar sua solicitacao no momento."
