@@ -1,9 +1,2 @@
 google-genai
 python-dotenv
-edge-tts
-asyncio
-SpeechRecognition
-pyaudio
-opencv-python
-pillow
-psutil
