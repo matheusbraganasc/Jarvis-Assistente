@@ -28,7 +28,7 @@ def enviar_mensagem(texto: str) -> dict:
             f"{BACKEND_URL}/chat",
             headers=HEADERS,
             json={"message": texto},
-            timeout=30,
+            timeout=60,
         )
         resposta.raise_for_status()
         return resposta.json()
